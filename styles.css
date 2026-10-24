@@ -206,3 +206,8 @@ a[href^="http"]::after {
   content: " \2197";
   font-size: 0.85em;
 }
+
+/* ---------- TEMPORARY: specificity experiment (delete in Step 4.9) ---------- */
+#main p {
+  color: red;
+}
