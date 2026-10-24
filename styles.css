@@ -26,3 +26,25 @@ body {
   color: var(--text);
   background: var(--bg);
 }
+
+/* ---------- 2. Headings, links, focus ---------- */
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--brand-dark);
+  line-height: 1.2;
+}
+h1 { font-size: 2.25rem; margin: 0 0 var(--space); }
+h2 { font-size: 1.6rem;  margin: 0 0 var(--space); }
+h3 { font-size: 1.2rem;  margin: 0 0 8px; }
+
+a { color: var(--brand); }
+a:hover {
+  color: var(--brand-dark);
+  text-decoration-thickness: 3px;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
