@@ -363,3 +363,22 @@ fieldset.choice {
 
 .saved-orders { margin-top: 40px; }
 .table-wrap { overflow-x: auto; margin-bottom: 16px; }
+
+/* ---------- 14. Responsive ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.9rem; }
+  #main { padding: 16px; }
+  .hero { padding: 32px 20px; }
+  .site-header { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .nav-list { flex-wrap: wrap; }
+  .btn { display: block; width: 100%; text-align: center; }
+  .site-footer { flex-direction: column; align-items: flex-start; }
+}
