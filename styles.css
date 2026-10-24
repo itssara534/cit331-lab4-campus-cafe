@@ -296,3 +296,40 @@ a[href^="http"]::after {
   justify-content: space-between;
   gap: 8px 24px;
 }
+
+/* ---------- 12. Flexbox: cards and menu ---------- */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.card-row > .card {
+  flex: 1 1 260px;
+}
+
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.menu-item {
+  flex: 1 1 300px;
+  margin-bottom: 0;
+}
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+/* keep the footer at the bottom of short pages */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#main {
+  width: 100%;
+  flex: 1;
+}
