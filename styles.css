@@ -269,3 +269,30 @@ a[href^="http"]::after {
   padding: 8px 14px;
   border-radius: 8px;
 }
+
+/* ---------- 11. Flexbox: header, nav, footer ---------- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-list {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
