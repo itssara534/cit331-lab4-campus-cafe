@@ -38,3 +38,36 @@ HTTPS protects data while it travels across a network, so nobody on the way can 
 
 ## Specificity experiment
 The rule #main p (specificity 1,0,1) turned every paragraph red, even the white hero paragraph, because an id outranks the class and element in .hero p (0,1,1), whatever the order in the file. After I changed it to main p (0,0,2), the hero paragraph went back to white, because .hero p (0,1,1) beats two element selectors, while the other paragraphs stayed red.
+
+## Selectors I used
+
+| Selector kind | Example from my CSS |
+|---------------|---------------------|
+| Element | table |
+| Class | .hero |
+| ID | #main |
+| Grouping (comma) | h1, h2, h3 |
+| Descendant (space) | .nav-list a |
+| Child (>) | main > section |
+| Adjacent sibling (+) | h1 + p |
+| Compound (no space, such as a.active) | .nav-list a.active |
+| Attribute | input[required], select[required] |
+| Pseudo-class | .nav-list a:not(.active):hover |
+| Pseudo-element | .menu-group h2::before |
+
+
+
+## Bug log (Lab 4, Task 6)
+
+| # | What was wrong (file and line) | Which tool showed it | My fix |
+|---|--------------------------------|----------------------|--------|
+| 1 | bugs.html line 2: the <html> tag had no lang attribute | Lighthouse and W3C validator | Added lang="en" |
+| 2 | bugs.html line 7: the link pointed to style.css but the file is bugs.css | Network tab (404, red row) | Changed href to bugs.css |
+| 3 | bugs.html line 10: the links were in a div, so there was no navigation landmark | Accessibility tree | Changed the div to nav |
+| 4 | bugs.html line 17: an h4 came right after the h1, skipping heading levels | Accessibility tree and validator | Changed h4 to h2 |
+| 5 | bugs.html line 18: the img had no alt attribute | Lighthouse and validator | Added alt text |
+| 6 | bugs.html line 21: the label had for="mail" but the input id is "email" | Clicking the label, Lighthouse | Changed for to "email" |
+| 7 | bugs.css line 14: the property was spelled colour | Styles pane (warning icon, crossed out) | Changed it to color |
+| 8 | bugs.css line 21: a semicolon was missing after #0b1f3a, so cursor: pointer on the next line was ignored | Styles pane and hover test | Added the semicolon |
+| 9 | bugs.css line 25: the selector .notes did not match class="note" in the HTML | Styles pane (rule applied to nothing) | Changed it to .note |
+| 10 | bugs.css line 27: after fixing .note, the text color #999999 on white was too light | Lighthouse (second run) | Changed it to #595959 |
